@@ -4,25 +4,24 @@
 // --------------------------------------------------
 
 .footer-blocks {
-	background: #dfdfdf;
+	background: #f2f2f2;
 	padding: @vertical-rhythm 0;
 
-	.panel-default {
-		border: none;
-		background: none;
-		.box-shadow(none);
+	&__more {
+		margin-top: @vertical-rhythm;
+		padding-top: @vertical-rhythm;
+		border-top: 1px solid #dedede;
 
-		.panel-heading {
-			background: none;
-			border: none;
-			font-size: 20px;
+		.box__caption {
 			padding: 0;
+			.font-normalize(16px, 0);
+			color: #999;
 		}
 
-		.panel-body {
-			padding-left: 0;
-			padding-right: 0;
-			padding-bottom: 0;
+		a,
+		a:focus {
+			color: #b9b9b9;
+			text-decoration: underline;
 		}
 	}
 }
@@ -151,10 +150,11 @@
 	text-align: center;
 	width: 34px;
 	height: 34px;
+	border-radius: @border-radius-base;
 
 	&:hover {
 		text-decoration: none;
-		background: lighten(@footer-bg, 1%);
+		background: darken(@footer-bg, 3%);
 	}
 
 	@media (max-width: @screen-md) {

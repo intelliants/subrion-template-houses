@@ -13,6 +13,23 @@
 		padding-right: 30px;
 	}
 
+	&__addr-eg {
+		.text-fade-50();
+		font-size: @font-size-small;
+		margin-top: 4px;
+
+		a,
+		a:focus {
+			border-bottom: 1px dashed @link-color;
+			text-decoration: none;
+
+			&:hover {
+				border-bottom-color: @link-hover-color;
+				text-decoration: none;
+			}
+		}
+	}
+
 	&__tabs {
 		.clearfix();
 	}
@@ -42,6 +59,14 @@
 					background: none;
 				}
 			}
+
+			> span {
+				color: fade(#fff, 80%);
+				font-size: 18px;
+				line-height: 18px;
+				padding: 24px 10px;
+				display: block;
+			}
 		}
 
 		@media (max-width: @screen-md-min) {
@@ -67,6 +92,7 @@
 				font-size: 18px;
 				line-height: 18px;
 				font-weight: bold;
+				border-radius: @border-radius-base @border-radius-base 0 0;
 
 				&:hover {
 					background: lighten(@link-color, 10%);
@@ -100,6 +126,7 @@
 
 	.tab-content {
 		background: #fff;
+		border-radius: 0 0 @border-radius-base @border-radius-base;
 		padding: 30px;
 		.box-shadow(0 0 15px rgba(0,0,0,.2));
 
@@ -113,7 +140,7 @@
 	}
 
 	&__inputs {
-		margin-bottom: @vertical-rhythm / 2;
+		margin-bottom: 0;
 
 		[class^="col-md"] {
 			padding: 0 5px;
@@ -157,6 +184,7 @@
 
 	&__more-actions {
 		float: left;
+		color: fade(@text-color, 55%);
 
 		@media (max-width: @grid-float-breakpoint) {
 			float: none;
@@ -174,7 +202,7 @@
 	&__info {
 		float: right;
 		margin: 0;
-		color: fade(@text-color, 70%);
+		color: fade(@text-color, 55%);
 
 		@media (max-width: @grid-float-breakpoint) {
 			float: none;

@@ -36,6 +36,11 @@
 			<position width="2">footer3</position>
 			<position width="6">footer4</position>
 		</section>
+
+		<section name="footer-blocks-more">
+			<position width="6">footer5</position>
+			<position width="6">footer6</position>
+		</section>
 	</layout>
 
 	<screenshots>
@@ -124,23 +129,16 @@
 
 		<block position="verytop" status="active" pages="index" header="0" classname="">real_estate_quick_search</block>
 		<block position="popular_locations" status="active" pages="index" header="0">real_estate_popular_locations</block>
-
-
-
-
-
-		<block position="bodystyle" status="active" pages="index" header="0">auto_body_list</block>
-		<block position="by_year" status="active" pages="index" header="0">auto_year_list</block>
-		<block position="verybottom" status="active" pages="index" header="0">auto_recent</block>
-		<block position="verytop" status="active" pages="index" header="0">auto_sponsored</block>
-		<block position="left" status="active" pages="autos_view" header="0" order="2">autos_enquiry_form</block>
-		<block position="left" order="-1" status="active" pages="autos_view" header="0">autos_author</block>
-		<block position="left" header="0" status="active" pages="autos_index,autos_index_latest,autos_view,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models,autos_services,autos_service_view" order="1">autos_tools</block>
-		<block position="left" status="active" pages="autos_index,autos_index_latest,autos_view,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models,autos_services,autos_service_view" order="5">auto_featured</block>
-		<block position="verybottom" header="0" status="active" pages="autos_index,autos_index_latest,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models,autos_services,autos_service_view" order="99">auto_random</block>
-
+		<block position="verytop" status="active" pages="index" header="0" classname="">real_estate_sponsored</block>
+		<block position="verybottom" status="active" pages="index" header="0" classname="">recent_real_estates</block>
+		<block position="footer5" status="active" classname="">real_estate_footer_locations</block>
+		<block position="footer6" status="active" classname="">real_estate_footer_states</block>
+		<block position="left" status="active" pages="realestate_view" header="0" order="2">real_estate_enquiry_form</block>
+		<block position="left" header="0" status="active" order="1">real_estate_tools</block>
+		<block position="left" status="active" order="1" classname="box--border">top_agents</block>
+		<block status="active" pages="search,realestate_index,realestate_search" classname="box--border">filters</block>
+		<block position="left" order="-1" status="active" pages="realestate_view" header="0">realestate_agent</block>
 		<block position="landing" order="99" status="active" sticky="0" pages="index" header="0">latest_news</block>
-		<block status="active" pages="search,search_autos,autos_index" classname="box--border">filters</block>
 
 		<block status="inactive" position="left" classname="box--border">common_statistics</block>
 		<block status="inactive">newsline</block>
@@ -294,7 +292,7 @@
 		<phrase category="frontend" key="house_details">Details</phrase>
 		<phrase category="frontend" key="added_on">added on</phrase>
 		<phrase category="frontend" key="special_offers">Special offers</phrase>
-		<phrase category="frontend" key="total_cars_listed">Total houses listed</phrase>
+		<phrase category="frontend" key="total_houses_listed">Total houses listed</phrase>
 		<phrase category="frontend" key="get_listed">Get listed to sell your property</phrase>
 		<phrase category="frontend" key="list">List</phrase>
 		<phrase category="frontend" key="grid">Grid</phrase>

@@ -140,7 +140,7 @@
 			</div>
 		{/if}
 
-		{if isset($iaBlocks.footer1) || isset($iaBlocks.footer2) || isset($iaBlocks.footer3) || isset($iaBlocks.footer4)}
+		{if isset($iaBlocks.footer1) || isset($iaBlocks.footer2) || isset($iaBlocks.footer3) || isset($iaBlocks.footer4) || isset($iaBlocks.footer5) || isset($iaBlocks.footer6)}
 			<div class="footer-blocks">
 				<div class="container">
 					<div class="row">
@@ -148,6 +148,10 @@
 						<div class="{width section='footer-blocks' position='footer2' tag='col-md-'}">{ia_blocks block='footer2'}</div>
 						<div class="{width section='footer-blocks' position='footer3' tag='col-md-'}">{ia_blocks block='footer3'}</div>
 						<div class="{width section='footer-blocks' position='footer4' tag='col-md-'}">{ia_blocks block='footer4'}</div>
+					</div>
+					<div class="row footer-blocks__more">
+						<div class="{width section='footer-blocks-more' position='footer5' tag='col-md-'}">{ia_blocks block='footer5'}</div>
+						<div class="{width section='footer-blocks-more' position='footer6' tag='col-md-'}">{ia_blocks block='footer6'}</div>
 					</div>
 				</div>
 			</div>
