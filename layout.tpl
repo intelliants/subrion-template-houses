@@ -54,7 +54,7 @@
 						{if !empty($core.config.site_logo)}
 							<img src="{$core.page.nonProtocolUrl}uploads/{$core.config.site_logo}" alt="{$core.config.site}">
 						{else}
-							<span>Cars</span>
+							<span>Houses</span>
 						{/if}
 					</a>
 				</div>
@@ -152,6 +152,7 @@
 					<div class="row footer-blocks__more">
 						<div class="{width section='footer-blocks-more' position='footer5' tag='col-md-'}">{ia_blocks block='footer5'}</div>
 						<div class="{width section='footer-blocks-more' position='footer6' tag='col-md-'}">{ia_blocks block='footer6'}</div>
+						<div class="{width section='footer-blocks-more' position='footer7' tag='col-md-'}">{ia_blocks block='footer7'}</div>
 					</div>
 				</div>
 			</div>
@@ -164,7 +165,7 @@
 				<div class="row">
 					<div class="col-md-6">
 						{ia_blocks block='copyright'}
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint accusantium doloremque, numquam, aut, modi similique corporis totam nulla pariatur nesciunt harum mollitia. Qui inventore dolores laboriosam, delectus temporibus deserunt neque?</p>
+						<p>{lang key='copyright_text'}</p>
 					</div>
 					<div class="col-md-6">
 						{if $core.config.template_social}

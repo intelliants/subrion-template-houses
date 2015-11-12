@@ -7,8 +7,8 @@
 					<li><a href="#tab_pop_locs" data-toggle="tab">{lang key='qsearch_popular_locations'}</a></li>
 				</ul>
 				<ul class="nav nav-links">
-					<li><span>{lang key='total_houses_listed'}: <b class="text-success">{$num_estates}</b></span></li>
 					<li><a href="{$core.packages.realestate.url}featured/">{lang key='qsearch_featured'}</a></li>
+					<li><a href="{$core.packages.realestate.url}sponsored/">{lang key='qsearch_sponsored'}</a></li>
 				</ul>
 			</div>
 			
@@ -19,7 +19,6 @@
 							<div class="row">
 								<div class="col-md-2">
 									<input type="text" name="keyword" autocomplete="off" class="form-control" placeholder="{lang key='field_address'}" id="qs-keyword" value="{$realestate_blocks.search.defaults.keyword}">
-									<p class="q-search__addr-eg">{lang key='for_example'} <a href="#" class="js-location-example">{$realestate_blocks.search.example}</a></p>
 								</div>
 								<div class="col-md-2">
 									<select class="form-control" name="category">
@@ -47,6 +46,14 @@
 									<button class="btn btn-warning btn-block" type="submit">
 										<span class="fa fa-search"></span> {lang key='search'}
 									</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p class="q-search__addr-eg">{lang key='for_example'} <a href="#" class="js-location-example">{$realestate_blocks.search.example}</a></p>
+								</div>
+								<div class="col-md-6">
+									<p class="q-search__info">{lang key='total_houses_listed'}: <b class="text-success">{$num_estates}</b></p>
 								</div>
 							</div>
 						</div>

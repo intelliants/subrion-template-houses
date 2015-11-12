@@ -444,6 +444,7 @@
 	}
 
 	&__items {
+		margin-bottom: @vertical-rhythm;
 
 		&.-list {
 
@@ -519,8 +520,10 @@
 	position: relative;
 	height: 150px;
 	overflow: hidden;
+	border-radius: @border-radius-base;
 
 	.ia-item__image {
+		border-radius: @border-radius-base;
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -529,6 +532,7 @@
 		z-index: 1;
 		max-width: none;
 		margin: 0;
+		overflow: hidden;
 
 		img {
 		  position: absolute;
@@ -550,6 +554,7 @@
 		right: 0;
 		bottom: 0;
 		top: 0;
+		border-radius: @border-radius-base;
 		background: rgba(0,0,0,0.6);
 		padding: 20px;
 		font-size: 14px;
