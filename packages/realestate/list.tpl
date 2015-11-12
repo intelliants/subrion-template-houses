@@ -47,7 +47,7 @@
 			<ul class="dropdown-menu pull-right">
 				<li>{printFavorites item=$listing itemtype='estates' guests=true}</li>
 				<li><a href="{ia_url type='url' item='estates' data=$listing}"><span class="fa fa-home"></span> {lang key='house_details'}</a></li>
-				{if 'favorites' != $core.page.name}
+				{if !in_array($core.page.name, array('favorites', 'view_member'))}
 					<li><a class="btn-compare" data-id="{$listing.id}" href="#" data-disabled="{(isset($_SESSION[iaEstate::SESSION_COMPARISON_KEY][$listing.id])) ? 'disabled' : ''}"><span class="fa fa-sort-amount-desc"></span> {lang key='mark_to_compare'}</a></li>
 				{/if}
 			</ul>
