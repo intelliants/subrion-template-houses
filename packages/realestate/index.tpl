@@ -52,16 +52,18 @@
 		{/if}
 
 		<div class="ia-cards__items -list">
-			{foreach $listings as $listing}
-				<div class="col-md-3">
-					{include file='extra:realestate/list'}
-				</div>
-			
-				{if $listing@iteration % 4 == 0}
+			<div class="row">
+				{foreach $listings as $listing}
+					<div class="col-md-3">
+						{include file='extra:realestate/list'}
 					</div>
-					<div class="row">
-				{/if}
-			{/foreach}
+				
+					{if $listing@iteration % 4 == 0}
+						</div>
+						<div class="row">
+					{/if}
+				{/foreach}
+			</div>
 		</div>
 
 		{navigation aTotal=$pagination.total aTemplate=$pagination.url aItemsPerPage=$pagination.limit}

@@ -223,10 +223,10 @@
 			   type="smarty">
 			<![CDATA[
 <ul class="nav nav-links">
-	<li><a href="#">Used cars for sale</a></li>
-	<li><a href="#">Second hand cars for sale</a></li>
-	<li><a href="#">New cars for sale</a></li>
-	<li><a href="#">Special Offers</a></li>
+	<li><a href="{$core.packages.realestate.url}search/properties/type:house">Houses for sale</a></li>
+	<li><a href="{$core.packages.realestate.url}search/properties/type:apartment">Apartments for sale</a></li>
+	<li><a href="{$core.packages.realestate.url}search/properties/type:villa">Villas for sale</a></li>
+	<li><a href="{$core.packages.realestate.url}sponsored/">Special Offers</a></li>
 </ul>
 			]]>
 		</block>

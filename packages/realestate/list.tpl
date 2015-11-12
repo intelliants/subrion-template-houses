@@ -61,7 +61,7 @@
 			<p><span class="fa fa-home"></span> <a href="{$smarty.const.IA_URL}search/properties/type:{$listing.type}/">{lang key="field_type_{$listing.type}"}</a></p>
 			{if $listing.bedrooms}<p title="{lang key='field_bedrooms'}"><span class="fa fa-bed"></span> {lang key="field_bedrooms_{$listing.bedrooms}"}</p>{/if}
 			{if $listing.bathrooms}<p title="{lang key='field_bathrooms'}"><span class="fa fa-tint"></span> {lang key="field_bathrooms_{$listing.bathrooms}"}</p>{/if}
-			<p><span class="fa fa-map-pin"></span> {$listing.location}{if !empty($listing.state)}, {$listing.state}{/if} {$listing.zip}</p>
+			<p><span class="fa fa-map-pin"></span> {$listing.location}{if !empty($listing.state)}, {$listing.state}{/if} {$listing.zipcode}</p>
 			<p><span class="fa fa-eye"></span> {$listing.views_num}</p>
 		</div>
 
