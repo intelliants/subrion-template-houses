@@ -5,7 +5,7 @@
 	<author>Gleb Surinov</author>
 	<contributor>Intelliants LLC</contributor>
 	<version>1.0.0</version>
-	<date>2015-11-05</date>
+	<date>2015-11-13</date>
 	<compatibility>4.0</compatibility>
 
 	<dependency type="package" exist="1">realestate</dependency>
@@ -16,8 +16,6 @@
 
 		<position>teaser</position>
 		<position>popular_locations</position>
-		<position>bodystyle</position>
-		<position>by_year</position>
 		<position>verytop</position>
 		<position>top</position>
 		<position>landing</position>
@@ -46,7 +44,7 @@
 
 	<screenshots>
 		<screenshot name="1.jpg"><![CDATA[Home page]]></screenshot>
-		<screenshot name="2.jpg"><![CDATA[View car page]]></screenshot>
+		<screenshot name="2.jpg"><![CDATA[View real estate page]]></screenshot>
 		<screenshot name="3.jpg"><![CDATA[Search houses with filters]]></screenshot>
 	</screenshots>
 
