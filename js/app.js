@@ -57,53 +57,21 @@ $(function() {
 
 
 	//
-	// Expand makes list
+	// Layout for cards RESERVED FOR FUTURE
 	// --------------------------------------------------
 
-	if ($('.pr-list-simple').length) {
-		$('.pr-list-simple .row:nth-child(5)').nextAll('.row')
-			.wrapAll('<div class="pr-list-simple__hidden"></div>')
+	// $('.js-toggle-layout').on('click', function(e) {
+	// 	e.preventDefault();
 
-		$('.js-more-makes').on('click', function(e) {
-			e.preventDefault();
+	// 	var $this = $(this),
+	// 		layout = $this.data('layout'),
+	// 		$cards = $('.ia-cards__items');
 
-			var $this = $(this),
-				$hiddenList = $('.pr-list-simple__hidden'),
-				lessText = $this.data('less-makes-text'),
-				moreText = $this.data('more-makes-text');
+	// 	$this.addClass('active').siblings().removeClass('active');
+	// 	$cards.removeClass('-list -grid').addClass('-' + layout);
 
-			if (!$hiddenList.hasClass('is-visible')) {
-				$hiddenList.slideDown('fast', function() {
-					$hiddenList.addClass('is-visible');
-					$this.html(lessText);
-				});
-			} else {
-				$hiddenList.slideUp('fast', function() {
-					$hiddenList.removeClass('is-visible');
-					$this.html(moreText);
-				});
-			}
-		});
-	}
-
-
-
-	//
-	// Layout for cards
-	// --------------------------------------------------
-
-	$('.js-toggle-layout').on('click', function(e) {
-		e.preventDefault();
-
-		var $this = $(this),
-			layout = $this.data('layout'),
-			$cards = $('.ia-cards__items');
-
-		$this.addClass('active').siblings().removeClass('active');
-		$cards.removeClass('-list -grid').addClass('-' + layout);
-
-		intelli.cookie.write('cardsLayout', layout, 30, intelli.config.baseurl.replace(window.location.origin, ''));
-	});
+	// 	intelli.cookie.write('cardsLayout', layout, 30, intelli.config.baseurl.replace(window.location.origin, ''));
+	// });
 
 
 
@@ -125,7 +93,7 @@ $(function() {
 	    }
 	}
 
-	if ($('.page-autos_view').length) {
+	if ($('.page-realestate_view').length) {
 		mq('(max-width: 768px)', function(match) {
 		    if (match) {
 		    	var $b = $('.content .aside');
