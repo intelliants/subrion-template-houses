@@ -1,5 +1,5 @@
 {if isset($realestate_blocks.recent)}
-	<h2 class="title title--accent">{$block.title|escape:'html'}</h2>
+	<h2 class="b-title b-title--accent">{$block.title|escape:'html'}</h2>
 	<div class="ia-cards ia-cards--small">
 		<div class="ia-cards__items">
 			<div class="row">

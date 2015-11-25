@@ -1,8 +1,8 @@
 {if isset($news_latest) && $news_latest}
 	<div class="news">
 		<div class="container">
-			<a href="#" class="btn btn-primary pull-right">All news</a>
-			<h2 class="title title--accent">Latest news and reviews</h2>
+			<!-- <a href="#" class="btn btn-primary pull-right">All news</a> -->
+			<h2 class="b-title b-title--accent">Latest news and reviews</h2>
 			<div class="row">
 				<div class="col-md-5">
 					{foreach $news_latest as $entry}

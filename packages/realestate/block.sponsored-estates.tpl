@@ -1,7 +1,6 @@
 {if isset($realestate_blocks.sponsored)}
 	<div class="container">
-		<h2 class="title title--accent">{lang key='special_offers'}</h2>
-
+		<h2 class="b-title b-title--accent">{lang key='special_offers'}</h2>
 		<div class="owl-carousel ia-carousel js-carousel-sponsored">
 			{foreach $realestate_blocks.sponsored as $item}
 				<div class="ia-carousel__item">
