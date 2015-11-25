@@ -1,49 +1,51 @@
 
 //
-// Sell car
+// Sell page
 // --------------------------------------------------
 
 // lets create two cols
-
-#fieldgroup_realestate_general,
-#fieldgroup_realestate_location {
-  .fieldset__content {
-    .row();
+.page-realestate_add {
+  #fieldgroup_realestate_general,
+  #fieldgroup_realestate_location {
+    .fieldset__content {
+      .row();
+    }
   }
-}
 
-#type_fieldzone,
-#category_fieldzone,
-#price_fieldzone,
-#size_fieldzone,
-#bedrooms_fieldzone,
-#bathrooms_fieldzone,
-#built_year_fieldzone,
-#floors_fieldzone,
-#address_fieldzone,
-#zipcode_fieldzone {
-  .make-md-column(6);
-}
+  #type_fieldzone,
+  #category_fieldzone,
+  #price_fieldzone,
+  #size_fieldzone,
+  #bedrooms_fieldzone,
+  #bathrooms_fieldzone,
+  #built_year_fieldzone,
+  #floors_fieldzone,
+  #address_fieldzone,
+  #zipcode_fieldzone {
+    .make-md-column(6);
+  }
 
-#description_fieldzone,
-#gallery_fieldzone,
-#location_fieldzone,
-#location2_fieldzone {
-  clear: both;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+  #description_fieldzone,
+  #gallery_fieldzone,
+  #location_fieldzone,
+  #location2_fieldzone {
+    clear: both;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-#special_features_fieldzone {
-  .radios-list {
-    .row();
+  #special_features_fieldzone {
+    .radios-list {
+      .row();
 
-    .checkbox {
-      margin: 0;
-      .make-md-column(3);
+      .checkbox {
+        margin: 0;
+        .make-md-column(3);
+      }
     }
   }
 }
+
 
 // // make checks and radios inline
 
