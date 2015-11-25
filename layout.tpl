@@ -91,34 +91,32 @@
 			<div class="content">
 				<div class="container">
 					<div class="row">
-						<div class="{width section='content' position='left' tag='col-md-'}{if 'autos_view' == $core.page.name} col-md-push-9{/if} aside">
+						<div class="{width section='content' position='left' tag='col-md-'} aside">
 							{ia_blocks block='left'}
 						</div>
-						<div class="{width section='content' position='center' tag='col-md-'}{if 'autos_view' == $core.page.name} col-md-pull-3{/if}">
+						<div class="{width section='content' position='center' tag='col-md-'}">
 							<div class="content__wrap">
 								{ia_hooker name='smartyFrontBeforeNotifications'}
 								{include file='notification.tpl'}
 
 								{ia_blocks block='top'}
 
-								{if 'autos_view' != $core.page.name && 'autos_service_view' != $core.page.name}
-									<div class="content__header">
-										<h1 class="page-header">{$core.page.title}</h1>
-										<ul class="content__actions">
-											{foreach $core.actions as $name => $action}
-												<li>
-													{if 'action-favorites' == $name}
-														{printFavorites item=$item itemtype=$item.item tpl='no-text' guests=true}
-													{else}
-														<a data-toggle="tooltip" title="{$action.title}" {foreach $action.attributes as $key => $value}{$key}="{$value}" {/foreach}>
-															<span class="fa fa-{$name}"></span>
-														</a>
-													{/if}
-												</li>
-											{/foreach}
-										</ul>
-									</div>
-								{/if}
+								<div class="content__header">
+									<h1 class="page-header">{$core.page.title}</h1>
+									<ul class="content__actions">
+										{foreach $core.actions as $name => $action}
+											<li>
+												{if 'action-favorites' == $name}
+													{printFavorites item=$item itemtype=$item.item tpl='no-text' guests=true}
+												{else}
+													<a data-toggle="tooltip" title="{$action.title}" {foreach $action.attributes as $key => $value}{$key}="{$value}" {/foreach}>
+														<span class="fa fa-{$name}"></span>
+													</a>
+												{/if}
+											</li>
+										{/foreach}
+									</ul>
+								</div>
 
 								{ia_hooker name='smartyFrontBeforeMainContent'}
 
