@@ -69,7 +69,7 @@
 		    description="Fixed navbar">1</config>
 
 	<config group="template_houses" 
-		    name="website_color" 
+		    name="template_color_scheme" 
 		    type="select" 
 		    multiplevalues="default,sky,roseus,carrot,bedroom" 
 		    description="Template color"

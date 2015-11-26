@@ -23,7 +23,7 @@
 
 		<link rel="shortcut icon" href="{$core.page.nonProtocolUrl}favicon.ico">
 
-		{ia_add_media files="jquery, subrion, js:bootstrap/js/bootstrap.min, css:iabootstrap-{$core.config.website_color}, css:user-style" order=0}
+		{ia_add_media files="jquery, subrion, js:bootstrap/js/bootstrap.min, css:iabootstrap-{$core.config.template_color_scheme}, css:user-style" order=0}
 		{ia_print_js files='_IA_TPL_owl.carousel.min, _IA_TPL_app' order=999}
 
 		{ia_hooker name='smartyFrontAfterHeadSection'}
