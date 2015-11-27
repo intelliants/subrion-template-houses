@@ -55,7 +55,7 @@
 	</div>
 </div>*}
 
-					{if $item@iteration % 6 == 0}
+					{if $item@iteration % 6 == 0 && !$item@last}
 						</div>
 						<div class="row">
 					{/if}

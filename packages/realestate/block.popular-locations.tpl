@@ -9,7 +9,7 @@
 					</div>
 				</div>
 
-				{if $item@iteration % 4 == 0}
+				{if $item@iteration % 4 == 0 && !$item@last}
 					</div>
 					<div class="row ia-cats">
 				{/if}

@@ -58,7 +58,7 @@
 						{include file='extra:realestate/list'}
 					</div>
 				
-					{if $listing@iteration % 4 == 0}
+					{if $listing@iteration % 4 == 0 && !$listing@last}
 						</div>
 						<div class="row">
 					{/if}
