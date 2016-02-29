@@ -8,13 +8,12 @@
 
 	{if iaEstate::STATUS_SOLD == $listing.status}
 		<span class="label label-status label-danger">{lang key='sold'}</span>
-	{elseif $member && $member.id == $listing.member_id && iaCore::STATUS_ACTIVE != $listing.status}
+	{elseif $member && $member.id == $listing.member_id
+	&& (iaCore::STATUS_APPROVAL == $listing.status || iaEstate::STATUS_HIDDEN == $listing.status)}
+		<span class="label label-status label-{$listing.status}" title="{lang key=$listing.status default=$listing.status}"><span class="fa fa-warning"></span> {lang key=$listing.status default=$listing.status}</span>
+	{else}
 		<span class="label label-status label-{$listing.status}" title="{lang key=$listing.status default=$listing.status}"><span class="fa fa-warning"></span> {lang key=$listing.status default=$listing.status}</span>
 	{/if}
-
-	{*if $member && $member.id == $listing.member_id && 'active' != $listing.status}
-		<span class="label label-status label-{$listing.status}" title="{lang key=$listing.status default=$listing.status}"><span class="fa fa-warning"></span> {lang key=$listing.status default=$listing.status}</span>
-	{/if*}
 
 	{if isset($listing.gallery[0]['path']) && $listing.gallery[0]['path']}
 		<a class="ia-card__image" href="{ia_url type='url' item='estates' data=$listing}">
