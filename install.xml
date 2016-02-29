@@ -4,8 +4,8 @@
 	<summary>Template for Subrion RealEstate Script</summary>
 	<author>Gleb Surinov</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>1.0.0</version>
-	<date>2015-11-13</date>
+	<version>1.0.1</version>
+	<date>2016-02-29</date>
 	<compatibility>4.0</compatibility>
 
 	<dependency type="package" exist="1">realestate</dependency>
