@@ -53,7 +53,7 @@
 		</div>
 
 		<a class="ia-card__title" href="{ia_url type='url' item='estates' data=$listing}">{$listing.address} <small class="text-fade-50">{lang key='id'}: {$listing.id}</small></a>
-		{if !empty($listing.price)}<p class="ia-card__sub-title">{$core.config.currency} {$listing.price}</p>{/if}
+		{if !empty($listing.price)}<p class="ia-card__sub-title">{$listing.price_formatted}</p>{/if}
 		{ia_hooker name='smartyItemListAfterTitle'}
 
 		<div class="ia-item__additional">

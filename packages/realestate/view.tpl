@@ -72,7 +72,7 @@
 						</tr>
 						<tr>
 							<td>{lang key='field_price'}</td>
-							<td class="text-success">{$core.config.currency} {$item.price}</td>
+							<td class="text-success">{$item.price_formatted}</td>
 						</tr>
 					</tbody>
 				</table>

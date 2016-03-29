@@ -26,34 +26,12 @@
 									</ul>
 								</div>
 								<a class="ia-card__title" href="{ia_url type='url' item='estates' data=$item}">{$item.address|escape:'html'}</a>
-								<p class="ia-card__sub-title">{$core.config.currency} {$item.price}</p>
+								{if !empty($item.price)}
+									<p class="ia-card__sub-title">{$item.price_formatted}</p>
+								{/if}
 							</div>
 						</div>
 					</div>
-
-
-
-
-
-{*<div class="ia-item">
-	{if isset($item.gallery[0]['path']) && $item.gallery[0]['path']}
-		<a class="ia-item__image" href="{ia_url type='url' item='estates' data=$item}">{printImage imgfile=$item.gallery[0]['path'] title=$item.address width=130}</a>
-	{/if}
-
-	<div class="ia-item__content">
-		<h4 class="ia-item__title">
-			<a href="{ia_url type='url' item='estates' data=$item}">{$item.address|escape:'html'}</a>
-		</h4>
-		{if !empty($item.price)}
-			<p class="text-success"><b><span class="fa fa-tag"></span> {$core.config.currency} {$item.price}</b></p>
-		{/if}
-		<div class="ia-item__additional">
-			<p><span class="fa fa-map-marker"></span> {$item.address2|escape:'html'}</p>
-			<p>{lang key='id'}: {$item.id}</p>
-		</div>
-		<p>{$item.description|strip_tags|truncate:'100':'...'}</p>
-	</div>
-</div>*}
 
 					{if $item@iteration % 6 == 0 && !$item@last}
 						</div>

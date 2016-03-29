@@ -25,7 +25,7 @@
 								</ul>
 							</div>
 							<a class="ia-card__title" href="{ia_url type='url' item='estates' data=$item}">{$item.address}</a>
-							{if !empty($item.price)}<p class="ia-card__sub-title">{$core.config.currency} {$item.price}</p>{/if}
+							{if !empty($item.price)}<p class="ia-card__sub-title">{$item.price_formatted}</p>{/if}
 							<table class="ia-card__info-table">
 								<tbody>
 									<tr>
@@ -43,25 +43,6 @@
 		</div>
 	</div>
 
-{*
-	<div class="ia-items sponsored-real-estates">
-		{foreach $realestate_blocks.sponsored as $item}
-			<div class="ia-item ia-item--border-bottom">
-				{if isset($item.gallery[0]['path']) && $item.gallery[0]['path']}
-					<a href="{ia_url type='url' item='estates' data=$item}" class="ia-item__image">{printImage imgfile=$item.gallery[0]['path'] title=$item.address width=50}</a>
-				{/if}
-
-				<div class="ia-item__content">
-					<h5 class="ia-item__title">
-						<a href="{ia_url type='url' item='estates' data=$item}">{$item.address|strip_tags|truncate:'30'}</a>
-					</h5>
-					<p><span class="fa fa-map-pin"></span> {$item.address2|escape:'html'}</p>
-					{if !empty($item.price)}<p class="text-success"><span class="fa fa-tag"></span> {$core.config.currency} {$item.price}</p>{/if}
-				</div>
-			</div>
-		{/foreach}
-	</div>
-*}
 	{ia_add_js}
 $(function() {
 	$('.js-carousel-sponsored').owlCarousel({

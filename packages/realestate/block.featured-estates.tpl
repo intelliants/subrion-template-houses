@@ -10,7 +10,7 @@
 					<h5 class="ia-item__title">
 						<a href="{ia_url type='url' item='estates' data=$item}">{$item.address|escape:'html'}</a>
 					</h5>
-					{if !empty($item.price)}<p class="ia-item__price"><span class="fa fa-tag"></span> {$core.config.currency} {$item.price}</p>{/if}
+					{if !empty($item.price)}<p class="ia-item__price"><span class="fa fa-tag"></span> {$item.price_formatted}</p>{/if}
 					<p><span class="fa fa-map-pin"></span> {$item.address2|escape:'html'}</p>
 				</div>
 			</div>
