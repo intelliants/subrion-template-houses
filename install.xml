@@ -71,7 +71,7 @@
 	<config group="template_houses"
 		    name="template_color_scheme"
 		    type="select"
-		    multiplevalues="default,sky,roseus,carrot,bedroom"
+			values="default,sky,roseus,carrot,bedroom"
 		    description="Template color"
 		    order="3004">default</config>
 
@@ -84,7 +84,7 @@
 	<config group="template_houses"
 		    name="template_fotorama_view"
 		    type="select"
-		    multiplevalues="contain,cover,scaledown,none"
+			values="contain,cover,scaledown,none"
 		    description="Fotorama fit method for images"
 		    order="3008">cover</config>
 
