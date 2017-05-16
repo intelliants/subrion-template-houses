@@ -22,10 +22,18 @@ var config = {
       path: "less/**/*.less",
       src: {
         dev: [
-          "less/iabootstrap.less",
+          "less/iabootstrap-default.less",
+          "less/iabootstrap-bedroom.less",
+          "less/iabootstrap-carrot.less",
+          "less/iabootstrap-roseus.less",
+          "less/iabootstrap-sky.less"
         ],
         prod: [
-          "less/iabootstrap.less",
+          "less/iabootstrap-default.less",
+          "less/iabootstrap-bedroom.less",
+          "less/iabootstrap-carrot.less",
+          "less/iabootstrap-roseus.less",
+          "less/iabootstrap-sky.less",
           "less/ckeditor.less"
         ]
       },
