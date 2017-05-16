@@ -19,7 +19,7 @@
                             <div class="container-fluid q-search__inputs">
                                 <div class="row">
                                     <div class="col-md-2">
-                                        <input type="text" name="keyword" autocomplete="off" class="form-control" placeholder="{lang key='field_address'}" id="qs-keyword" value="{$realestate_blocks.search.defaults.keyword}">
+                                        <input type="text" name="keyword" autocomplete="off" class="form-control" placeholder="{lang key='field_estates_address'}" id="qs-keyword" value="{$realestate_blocks.search.defaults.keyword}">
                                     </div>
                                     <div class="col-md-2">
                                         <select class="form-control" name="category">
@@ -31,7 +31,7 @@
                                     </div>
                                     <div class="col-md-2">
                                         <select class="form-control" name="type">
-                                            <option value="">{lang key='field_type'}</option>
+                                            <option value="">{lang key='field_estates_type'}</option>
                                             {foreach $realestate_blocks.search.type as $value => $title}
                                                 <option value="{$value}"{if $realestate_blocks.search.defaults.type == $value} selected{/if}>{$title}</option>
                                             {/foreach}
@@ -75,7 +75,7 @@
                     <div class="container-fluid q-search__inputs">
                         <div class="row">
                             <div class="col-md-2">
-                                <input type="text" name="keyword" autocomplete="off" class="form-control" placeholder="{lang key='field_address'}" id="qs-keyword" value="{$realestate_blocks.search.defaults.keyword}">
+                                <input type="text" name="keyword" autocomplete="off" class="form-control" placeholder="{lang key='field_estates_address'}" id="qs-keyword" value="{$realestate_blocks.search.defaults.keyword}">
                             </div>
                             <div class="col-md-2">
                                 <select class="form-control" name="category">
@@ -87,7 +87,7 @@
                             </div>
                             <div class="col-md-2">
                                 <select class="form-control" name="type">
-                                    <option value="">{lang key='field_type'}</option>
+                                    <option value="">{lang key='field_estates_type'}</option>
                                     {foreach $realestate_blocks.search.type as $value => $title}
                                         <option value="{$value}"{if $realestate_blocks.search.defaults.type == $value} selected{/if}>{$title}</option>
                                     {/foreach}
@@ -121,24 +121,19 @@
 {/if}
 
 {ia_add_js}
-$('.js-location-example').on('click', function(e)
-{
+$('.js-location-example').on('click', function(e) {
     e.preventDefault();
     $('#qs-keyword').val($(this).text());
 });
 
-$('#qs-keyword').typeahead(
-{
-    source: function(query, process)
-    {
-        return $.ajax(
-        {
+$('#qs-keyword').typeahead({
+    source: function(query, process) {
+        return $.ajax({
             url: intelli.config.ia_url + 'search/properties.json',
             type: 'get',
             dataType: 'json',
             data: { q: query },
-            success: function(response)
-            {
+            success: function(response) {
                 return process(response);
             }
         });

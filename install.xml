@@ -5,10 +5,10 @@
     <author>Gleb Surinov</author>
     <contributor>Intelliants LLC</contributor>
     <version>2.0.0</version>
-    <date>2017-04-19</date>
+    <date>2017-05-16</date>
     <compatibility>4.1</compatibility>
 
-    <!--<dependency type="package" exist="1">realestate</dependency>-->
+    <dependency type="package" exist="1">realestate</dependency>
 
     <layout>
         <position menu="1" movable="0">account</position>
