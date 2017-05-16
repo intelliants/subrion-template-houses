@@ -6,7 +6,6 @@
                 {foreach $realestate_blocks.recent as $entry}
                     <div class="col-md-2 col-sm-2">
                         <div class="ia-card ia-card--small -{$entry.status} {if 'hidden' == $entry.status}-hidden{/if} {if $entry.featured}-featured{/if} {if $entry.sponsored}-sponsored{/if}">
-
                             {if !empty($entry.gallery)}
                                 <a class="ia-card__image" href="{$entry.link}">
                                     {ia_image file=$entry.gallery[0] type='thumbnail' title=$entry.address}
@@ -14,6 +13,10 @@
                                         <span class="pull-left"><span class="fa fa-image"></span> {$entry.gallery_num}</span>
                                         <span class="pull-right">{$entry.date_added|date_format:$core.config.date_format}</span>
                                     </span>
+                                </a>
+                            {else}
+                                <a class="ia-card__image" href="{$entry.link}">
+                                    <img src="{$smarty.const.IA_TPL_URL}img/no-preview.png" alt="{$entry.address}">
                                 </a>
                             {/if}
 

@@ -361,11 +361,25 @@
 		display: block;
 	}
 }
+
 .ia-cards__items.-list .ia-card.-sponsored .ia-card__content {
 	margin-left: 240px;
 
 	@media (max-width: @screen-xs) {
 		margin-left: 80px;
+	}
+}
+
+.ia-cards__items.-grid {
+
+	.ia-card {
+
+		&__content {
+
+			> p {
+				display: none;
+			}
+		}
 	}
 }
 

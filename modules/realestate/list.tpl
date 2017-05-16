@@ -38,6 +38,10 @@
                 {/foreach}
             </div>
         {/if}
+    {else}
+        <a class="ia-card__image" href="{$listing.link}">
+            <img src="{$smarty.const.IA_TPL_URL}img/no-preview.png" alt="{$listing.address}">
+        </a>
     {/if}
 
     <div class="ia-card__content">

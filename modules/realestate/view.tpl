@@ -39,30 +39,6 @@
                             <td><a href="{$smarty.const.IA_URL}search/properties/type:{$item.type}/">{lang key="field_estates_type+{$item.type}"}</a></td>
                         </tr>
                         <tr>
-                            <td>{lang key='field_estates_bedrooms'}</td>
-                            <td>{if $item.bedrooms}{lang key="field_estates_bedrooms+{$item.bedrooms}"}{/if}</td>
-                        </tr>
-                        <tr>
-                            <td>{lang key='field_estates_bathrooms'}</td>
-                            <td>{if $item.bathrooms}{lang key="field_estates_bathrooms+{$item.bathrooms}"}{/if}</td>
-                        </tr>
-                        <tr>
-                            <td>{lang key='field_estates_built_year'}</td>
-                            <td>{$item.built_year}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-6">
-                <table class="ia-item-view__table">
-                    <tbody>
-                        {if !empty($item.floors)}
-                            <tr>
-                                <td>{lang key='field_estates_floors'}</td>
-                                <td>{$item.floors}</td>
-                            </tr>
-                        {/if}
-                        <tr>
                             <td>{lang key='field_estates_size'}</td>
                             <td>{$item.size}</td>
                         </tr>
@@ -77,18 +53,50 @@
                     </tbody>
                 </table>
             </div>
+            <div class="col-md-6">
+                <table class="ia-item-view__table">
+                    <tbody>
+                        {if !empty($item.floors)}
+                            <tr>
+                                <td>{lang key='field_estates_floors'}</td>
+                                <td>{$item.floors}</td>
+                            </tr>
+                        {/if}
+                        {if !empty($item.bedrooms)}
+                            <tr>
+                                <td>{lang key='field_estates_bedrooms'}</td>
+                                <td>{if $item.bedrooms}{lang key="field_estates_bedrooms+{$item.bedrooms}"}{/if}</td>
+                            </tr>
+                        {/if}
+                        {if !empty($item.bathrooms)}
+                            <tr>
+                                <td>{lang key='field_estates_bathrooms'}</td>
+                                <td>{if $item.bathrooms}{lang key="field_estates_bathrooms+{$item.bathrooms}"}{/if}</td>
+                            </tr>
+                        {/if}
+                        {if !empty($item.built_year)}
+                            <tr>
+                                <td>{lang key='field_estates_built_year'}</td>
+                                <td>{$item.built_year}</td>
+                            </tr>
+                        {/if}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
-    <div class="ia-item-view__section">
-        <h3>{lang key='field_estates_special_features'}</h3>
+    {if !empty($item.special_features)}
+        <div class="ia-item-view__section">
+            <h3>{lang key='field_estates_special_features'}</h3>
 
-        <div class="ia-item-view__features">
-            {foreach explode(',', $item.special_features) as $opt}
-                <div class="ia-item-view__features__item"><span class="fa fa-check-square"></span> {lang key="field_estates_special_features+{$opt}"}</div>
-            {/foreach}
+            <div class="ia-item-view__features">
+                {foreach explode(',', $item.special_features) as $opt}
+                    <div class="ia-item-view__features__item"><span class="fa fa-check-square"></span> {lang key="field_estates_special_features+{$opt}"}</div>
+                {/foreach}
+            </div>
         </div>
-    </div>
+    {/if}
 
     <div class="ia-item-view__section">
         <h3>{lang key='fieldgroup_estates_realestate_location'}</h3>
@@ -101,11 +109,13 @@
         {ia_add_media files='js: _IA_URL_modules/realestate/js/front/view'}
     </div>
 
-    <div class="ia-item-view__section">
-        <h3>{lang key='fieldgroup_estates_realestate_additional'}</h3>
+    {if !empty($item.description)}
+        <div class="ia-item-view__section">
+            <h3>{lang key='fieldgroup_estates_realestate_additional'}</h3>
 
-        {$item.description|escape}
-    </div>
+            {$item.description|escape}
+        </div>
+    {/if}
 
     {include file='item-view-tabs.tpl' isView=true exceptions=array('description', 'gallery', 'type', 'category', 'price', 'bedrooms', 'bathrooms', 'size', 'floors', 'built_year', 'special_features', 'address', 'zipcode')}
 

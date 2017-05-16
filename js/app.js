@@ -59,18 +59,18 @@ $(function () {
     // Layout for cards RESERVED FOR FUTURE
     // --------------------------------------------------
 
-    // $('.js-toggle-layout').on('click', function(e) {
-    // 	e.preventDefault();
+     $('.js-toggle-layout').on('click', function(e) {
+        e.preventDefault();
 
-    // 	var $this = $(this),
-    // 		layout = $this.data('layout'),
-    // 		$cards = $('.ia-cards__items');
+        var $this = $(this),
+            layout = $this.data('layout'),
+            $cards = $('.ia-cards__items');
 
-    // 	$this.addClass('active').siblings().removeClass('active');
-    // 	$cards.removeClass('-list -grid').addClass('-' + layout);
+        $this.addClass('active').siblings().removeClass('active');
+        $cards.removeClass('-list -grid -map').addClass('-' + layout);
 
-    // 	intelli.cookie.write('cardsLayout', layout, 30, intelli.config.baseurl.replace(window.location.origin, ''));
-    // });
+        intelli.cookie.write('cardsLayout', layout, 30, intelli.config.baseurl.replace(window.location.origin, ''));
+     });
 
 
     //

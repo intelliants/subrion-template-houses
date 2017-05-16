@@ -54,33 +54,28 @@
             name="houses_divider1"
             type="divider"
             order="3000">General</config>
-
     <config group="template_houses"
             name="max_top_menu_items"
             type="text"
             description="Max number of items in Main Menu"
             order="3002">7</config>
-
     <config group="template_houses"
             name="fixed_navbar"
             type="radio"
             order="3003"
             values="1,0"
             description="Fixed navbar">1</config>
-
     <config group="template_houses"
             name="template_color_scheme"
             type="select"
             values="default,sky,roseus,carrot,bedroom"
             description="Template color"
             order="3004">default</config>
-
     <config group="template_houses"
             name="website_bg"
             type="image"
             description="Header background"
             order="3005"><![CDATA[]]></config>
-
     <config group="template_houses"
             name="template_fotorama_view"
             type="select"
@@ -89,10 +84,9 @@
             order="3008">cover</config>
 
     <config group="template_houses"
-            name="houses_divider2"
+            name="houses_divider3"
             type="divider"
             order="3030">Social links</config>
-
     <config group="template_houses"
             name="template_social"
             type="radio"
@@ -135,7 +129,7 @@
 
         <block position="verytop" status="active" sticky="1" header="0" classname="">real_estate_quick_search</block>
         <block position="popular_locations" status="active" pages="index" header="0">real_estate_popular_locations</block>
-        <block position="verytop" status="active" pages="index" header="0" classname="">real_estate_sponsored</block>
+        <block position="verytop" status="active" pages="index" sticky="0" header="0" classname="">real_estate_sponsored</block>
         <block position="left" status="active" classname="" pages="search,search_estates,realestate_index,realestate_search,realestate_add,realestate_view">real_estate_featured</block>
         <block position="verybottom" status="active" pages="index" header="0" classname="">recent_real_estates</block>
         <block position="footer5" status="active" sticky="1" classname="">real_estate_footer_locations</block>

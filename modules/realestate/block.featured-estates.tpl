@@ -6,6 +6,10 @@
                     <a href="{$entry.link}" class="ia-item__image">
                         {ia_image file=$entry.gallery[0] type='thumbnail' title=$entry.address width=50}
                     </a>
+                {else}
+                    <a class="ia-card__image" href="{$entry.link}">
+                        <img src="{$smarty.const.IA_TPL_URL}img/no-preview.png" alt="{$entry.address}" width="50">
+                    </a>
                 {/if}
 
                 <div class="ia-item__content">

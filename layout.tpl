@@ -133,7 +133,7 @@
             </div>
         {/if}
 
-        {if isset($iaBlocks.verybottom)}
+        {if isset($iaBlocks.verybottom) && $core.page.name !== 'realestate_comparison'}
             <div class="sec sec-verybottom">
                 <div class="container">{ia_blocks block='verybottom'}</div>
             </div>
