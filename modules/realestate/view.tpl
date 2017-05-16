@@ -1,5 +1,5 @@
 <div class="ia-item-view">
-    <div class="ia-item-view__price">{$core.config.currency} {$item.price}</div>
+    <div class="ia-item-view__price">{$core.config.currency} {$item.price_formatted}</div>
 
     <h4 class="ia-item-view__sub-header">{$item.address2|escape} {$item.country|escape}</h4>
     <div class="ia-item-view__info">
