@@ -307,5 +307,6 @@
         <phrase category="frontend" key="list">List</phrase>
         <phrase category="frontend" key="grid">Grid</phrase>
         <phrase category="frontend" key="copyright_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint accusantium doloremque, numquam, aut, modi similique corporis totam nulla pariatur nesciunt harum mollitia. Qui inventore dolores laboriosam, delectus temporibus deserunt neque?</phrase>
+        <phrase category="frontend" key="admin_dashboard">Admin Dashboard</phrase>
     </phrases>
 </module>
