@@ -129,7 +129,7 @@ $('.js-location-example').on('click', function(e) {
 $('#qs-keyword').typeahead({
     source: function(query, process) {
         return $.ajax({
-            url: intelli.config.ia_url + 'search/properties.json',
+            url: intelli.config.packages.realestate.url + 'realestate/address.json',
             type: 'get',
             dataType: 'json',
             data: { q: query },
