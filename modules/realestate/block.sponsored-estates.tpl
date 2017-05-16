@@ -29,7 +29,16 @@
                             <table class="ia-card__info-table">
                                 <tbody>
                                     <tr>
-                                        <td><span class="fa fa-home"></span> {lang key="field_estates_type+{$entry.type}"} <span class="fa fa-bed m-l"></span> {$entry.bedrooms} <span class="fa fa-tint m-l"></span> {$entry.bathrooms}</td>
+                                        <td>
+                                            <span class="fa fa-home"></span>
+                                            {lang key="field_estates_type+{$entry.type}"}
+                                            {if !empty($entry.bedrooms)}
+                                                <span class="fa fa-bed m-l"></span> {$entry.bedrooms}
+                                            {/if}
+                                            {if !empty($entry.bathrooms)}
+                                                <span class="fa fa-tint m-l"></span> {$entry.bathrooms}
+                                            {/if}
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><span class="fa fa-map-marker"></span> {$entry.address2|escape}</td>
