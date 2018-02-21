@@ -1,6 +1,6 @@
-{if !empty($realestate_blocks.types)}
+{if !empty($realestate.types)}
     <p>
-        {foreach $realestate_blocks.types as $type => $title}
+        {foreach $realestate.types as $type => $title}
             <a href="{$smarty.const.IA_URL}search/properties/type:{$type}/">{$title|escape}</a>{if !$title@last} &middot; {/if}
         {/foreach}
     </p>

@@ -1,10 +1,10 @@
-{if !empty($realestate_blocks.popular_cities)}
+{if !empty($realestate.popularCities)}
     <div class="ia-categories">
         <div class="row">
-            {foreach $realestate_blocks.popular_cities as $entry}
+            {foreach $realestate.popularCities as $entry}
                 <div class="col-md-3 col-sm-3">
                     <div class="ia-cat">
-                        <a href="{$core.packages.realestate.url}{$entry.url}">{$entry.title}, {$entry.abbreviation}</a>
+                        <a href="{$entry.link}">{$entry.title|escape}, {$entry.abbreviation}</a>
                         {if $core.config.realestate_popular_show_number} &mdash; {$entry.num_listings}{/if}
                     </div>
                 </div>

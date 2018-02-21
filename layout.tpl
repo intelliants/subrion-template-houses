@@ -32,7 +32,8 @@
 
         {ia_add_js}
             intelli.pageName = '{$core.page.name}';
-
+            intelli.securityToken = '{$securityToken}';
+            intelli.config.url = '{$smarty.const.IA_URL}';
             {foreach $core.customConfig as $key => $value}
                 intelli.config.{$key} = '{$value}';
             {/foreach}
@@ -62,7 +63,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     {ia_blocks block='account'}
-                    {include file='language-selector.tpl'}
+                    {include 'language-selector.tpl'}
                     {ia_blocks block='mainmenu'}
                 </div>
             </div>
@@ -76,7 +77,7 @@
 
         {ia_hooker name='smartyFrontBeforeBreadcrumb'}
 
-        {include file='breadcrumb.tpl'}
+        {include 'breadcrumb.tpl'}
 
         {if isset($iaBlocks.verytop)}
             <div class="verytop">
@@ -98,19 +99,19 @@
                         <div class="{width section='content' position='center' tag='col-md-'}">
                             <div class="content__wrap">
                                 {ia_hooker name='smartyFrontBeforeNotifications'}
-                                {include file='notification.tpl'}
+                                {include 'notification.tpl'}
 
                                 {ia_blocks block='top'}
 
                                 <div class="content__header">
-                                    <h1 class="page-header">{$core.page.title}</h1>
+                                    <h1 class="page-header">{$core.page.title|escape}</h1>
                                     <ul class="content__actions">
                                         {foreach $core.actions as $name => $action}
                                             <li>
                                                 {if 'action-favorites' == $name}
                                                     {printFavorites item=$item itemtype=$item.item tpl='no-text' guests=true}
                                                 {else}
-                                                    <a data-toggle="tooltip" title="{$action.title}" {foreach $action.attributes as $key => $value}{$key}="{$value}" {/foreach}>
+                                                    <a data-toggle="tooltip" title="{$action.title|escape}" {foreach $action.attributes as $key => $value}{$key}="{$value|escape}" {/foreach}>
                                                         <span class="fa fa-{$name}"></span>
                                                     </a>
                                                 {/if}
@@ -169,10 +170,10 @@
                     <div class="col-md-6">
                         {if $core.config.template_social}
                             <div class="social">
-                                {if $core.config.template_social_t}<a class="twitter" href="{$core.config.template_social_t}" target="_blank"><span class="fa fa-twitter"></span></a>{/if}
-                                {if $core.config.template_social_f}<a class="facebook" href="{$core.config.template_social_f}" target="_blank"><span class="fa fa-facebook"></span></a>{/if}
-                                {if $core.config.template_social_g}<a class="google-plus" href="{$core.config.template_social_g}" target="_blank"><span class="fa fa-google-plus"></span></a>{/if}
-                                {if $core.config.template_social_y}<a class="youtube" href="{$core.config.template_social_y}" target="_blank"><span class="fa fa-youtube"></span></a>{/if}
+                                {if $core.config.template_social_t}<a class="twitter" href="{$core.config.template_social_t|escape}" target="_blank"><span class="fa fa-twitter"></span></a>{/if}
+                                {if $core.config.template_social_f}<a class="facebook" href="{$core.config.template_social_f|escape}" target="_blank"><span class="fa fa-facebook"></span></a>{/if}
+                                {if $core.config.template_social_g}<a class="google-plus" href="{$core.config.template_social_g|escape}" target="_blank"><span class="fa fa-google-plus"></span></a>{/if}
+                                {if $core.config.template_social_y}<a class="youtube" href="{$core.config.template_social_y|escape}" target="_blank"><span class="fa fa-youtube"></span></a>{/if}
                             </div>
                         {/if}
                         <div class="copyright">
@@ -199,7 +200,7 @@
         {/if}
 
         {if isset($manageMode)}
-            {include file='visual-mode.tpl'}
+            {include 'visual-mode.tpl'}
         {/if}
 
         {if isset($previewMode)}

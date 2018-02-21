@@ -48,7 +48,7 @@
         <div class="ia-card__actions dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-ellipsis-v"></span></a>
             <ul class="dropdown-menu pull-right">
-                <li>{printFavorites item=$listing itemtype='estates' guests=true}</li>
+                <li>{printFavorites item=$listing itemtype='estate' guests=true}</li>
                 <li><a href="{$listing.link}"><span class="fa fa-home"></span> {lang key='house_details'}</a></li>
                 {if !in_array($core.page.name, array('favorites', 'view_member'))}
                     <li><a class="btn-compare" data-id="{$listing.id}" href="#" data-disabled="{(isset($_SESSION[iaEstate::SESSION_COMPARISON_KEY][$listing.id])) ? 'disabled' : ''}"><span class="fa fa-sort-amount-desc"></span> {lang key='mark_to_compare'}</a></li>
@@ -62,9 +62,9 @@
         {ia_hooker name='smartyItemListAfterTitle'}
 
         <div class="ia-item__additional">
-            <p><span class="fa fa-home"></span> <a href="{$smarty.const.IA_URL}search/properties/type:{$listing.type}/">{lang key="field_estates_type+{$listing.type}"}</a></p>
-            {if !empty($listing.bedrooms)}<p title="{lang key='field_estates_bedrooms'}"><span class="fa fa-bed"></span> {lang key="field_estates_bedrooms+{$listing.bedrooms}"}</p>{/if}
-            {if !empty($listing.bathrooms)}<p title="{lang key='field_estates_bathrooms'}"><span class="fa fa-tint"></span> {lang key="field_estates_bathrooms+{$listing.bathrooms}"}</p>{/if}
+            <p><span class="fa fa-home"></span> <a href="{$smarty.const.IA_URL}search/properties/type:{$listing.type}/">{lang key="field_estate_type+{$listing.type}"}</a></p>
+            {if !empty($listing.bedrooms)}<p title="{lang key='field_estate_bedrooms'}"><span class="fa fa-bed"></span> {lang key="field_estate_bedrooms+{$listing.bedrooms}"}</p>{/if}
+            {if !empty($listing.bathrooms)}<p title="{lang key='field_estate_bathrooms'}"><span class="fa fa-tint"></span> {lang key="field_estate_bathrooms+{$listing.bathrooms}"}</p>{/if}
             <p><span class="fa fa-map-pin"></span> {$listing.location}{if !empty($listing.state)}, {$listing.state}{/if} {$listing.zipcode}</p>
             <p><span class="fa fa-eye"></span> {$listing.views_num}</p>
         </div>

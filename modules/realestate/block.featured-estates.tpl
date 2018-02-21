@@ -1,6 +1,6 @@
-{if !empty($realestate_blocks.featured)}
+{if isset($realestate.featured)}
     <div class="ia-items featured-real-estates">
-        {foreach $realestate_blocks.featured as $entry}
+        {foreach $realestate.featured as $entry}
             <div class="ia-item -with-bg">
                 {if !empty($entry.gallery)}
                     <a href="{$entry.link}" class="ia-item__image">

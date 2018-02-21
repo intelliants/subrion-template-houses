@@ -1,10 +1,10 @@
-{if !empty($realestate_blocks.sponsored)}
+{if isset($realestate.sponsored)}
     <div class="container">
         <h2 class="b-title b-title--accent">{lang key='special_offers'}</h2>
         <div class="owl-carousel ia-carousel js-carousel-sponsored">
-            {foreach $realestate_blocks.sponsored as $entry}
+            {foreach $realestate.sponsored as $entry}
                 <div class="ia-carousel__item">
-                    <div class="ia-card -{$entry.status} {if 'hidden' == $entry.status}-hidden{/if}">
+                    <div class="ia-card -{$entry.status}{if 'hidden' == $entry.status} -hidden{/if}">
 
                         {if !empty($entry.gallery)}
                             <a class="ia-card__image" href="{$entry.link}">
@@ -20,7 +20,7 @@
                             <div class="ia-card__actions dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-ellipsis-v"></span></a>
                                 <ul class="dropdown-menu pull-right">
-                                    <li>{printFavorites item=$entry itemtype='estates' guests=true}</li>
+                                    <li>{printFavorites item=$entry itemtype='estate' guests=true}</li>
                                     <li><a href="{$entry.link}"><span class="fa fa-home"></span> {lang key='house_details'}</a></li>
                                 </ul>
                             </div>
@@ -31,7 +31,7 @@
                                     <tr>
                                         <td>
                                             <span class="fa fa-home"></span>
-                                            {lang key="field_estates_type+{$entry.type}"}
+                                            {lang key="field_estate_type+{$entry.type}"}
                                             {if !empty($entry.bedrooms)}
                                                 <span class="fa fa-bed m-l"></span> {$entry.bedrooms}
                                             {/if}

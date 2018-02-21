@@ -1,9 +1,9 @@
-{if !empty($realestate_blocks.recent)}
+{if isset($realestate.recent)}
     <h2 class="b-title b-title--accent">{$block.title|escape}</h2>
     <div class="ia-cards ia-cards--small">
         <div class="ia-cards__items">
             <div class="row">
-                {foreach $realestate_blocks.recent as $entry}
+                {foreach $realestate.recent as $entry}
                     <div class="col-md-2 col-sm-2">
                         <div class="ia-card ia-card--small -{$entry.status} {if 'hidden' == $entry.status}-hidden{/if} {if $entry.featured}-featured{/if} {if $entry.sponsored}-sponsored{/if}">
                             {if !empty($entry.gallery)}
@@ -16,7 +16,7 @@
                                 </a>
                             {else}
                                 <a class="ia-card__image" href="{$entry.link}">
-                                    <img src="{$smarty.const.IA_TPL_URL}img/no-preview.png" alt="{$entry.address}">
+                                    <img src="{$smarty.const.IA_TPL_URL}img/no-preview.png" alt="{$entry.address|escape}">
                                 </a>
                             {/if}
 
@@ -24,7 +24,7 @@
                                 <div class="ia-card__actions dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-ellipsis-v"></span></a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li>{printFavorites item=$entry itemtype='estates' guests=true}</li>
+                                        <li>{printFavorites item=$entry itemtype='estate' guests=true}</li>
                                         <li><a href="{$entry.link}"><span class="fa fa-home"></span> {lang key='house_details'}</a></li>
                                     </ul>
                                 </div>

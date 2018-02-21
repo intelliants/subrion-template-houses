@@ -10,7 +10,7 @@
         <ul class="dropdown-menu js-estates-sorting-options">
             <li><a href="#" data-field="date"><span class="fa fa-clock-o"></span> {lang key='date'}</a></li>
             <li><a href="#" data-field="price"><span class="fa fa-dollar"></span> {lang key='price'}</a></li>
-            <li><a href="#" data-field="year"><span class="fa fa-calendar"></span> {lang key='field_estates_built_year'}</a></li>
+            <li><a href="#" data-field="year"><span class="fa fa-calendar"></span> {lang key='field_estate_built_year'}</a></li>
         </ul>
     </div>
 
