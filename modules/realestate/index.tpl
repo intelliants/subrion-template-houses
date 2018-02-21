@@ -4,7 +4,7 @@
 
 {if !empty($locations)}
     {ia_block title={lang key='locations'} style='fixed' id='re-categories'}
-        {html_categories source=$locations columns=$core.config.realestate_location_columns}
+        {include 'ia-categories.tpl' categories=$locations show_amount=true num_columns=3 item='location'}
     {/ia_block}
 {/if}
 
