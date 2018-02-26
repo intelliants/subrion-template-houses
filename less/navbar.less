@@ -176,14 +176,18 @@ a.navbar-btn-compare {
   }
 }
 
-.navbar-nav > li {
+.navbar-nav {
+  padding: 0;
 
-  > .dropdown-menu {
-    border-radius: 0;
-    border: none;
+  > li {
 
-    @media (min-width: @grid-float-breakpoint) {
-      border-bottom: 2px solid @brand-primary;
+    > .dropdown-menu {
+      border-radius: 0;
+      border: none;
+
+      @media (min-width: @grid-float-breakpoint) {
+        border-bottom: 2px solid @brand-primary;
+      }
     }
   }
 }
@@ -204,6 +208,109 @@ a.navbar-btn-compare {
     &:focus {
       color: #fff;
       #gradient > .vertical(@start-color: @dropdown-link-active-bg; @end-color: darken(@dropdown-link-active-bg, 5%));
+    }
+  }
+}
+
+html[dir="rtl"] {
+
+  @media (max-width: @grid-float-breakpoint) {
+    .navbar {
+
+      &-nav {
+
+        .open .dropdown-menu {
+
+          > li > a,
+          .dropdown-header {
+            padding-left: @gap;
+            padding-right: 25px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    .navbar {
+
+      &-header {
+        float: right;
+      }
+
+      &-fixed-top .nav-account {
+        margin-right: 0;
+        margin-left: -15px;
+      }
+
+      & > .container {
+
+        &       .navbar-brand,
+        &-fluid .navbar-brand {
+          margin-left: 0;
+          margin-right: -@gap;
+        }
+      }
+
+      &-left {
+        float: right !important;
+
+        .dropdown-menu {
+          left: auto;
+          right: 0;
+        }
+      }
+
+      &-right {
+        float: left !important;
+
+        .dropdown-menu {
+          left: 0;
+          right: auto;
+        }
+      }
+
+      .dropdown-menu {
+        text-align: right;
+      }
+
+      &-nav {
+
+        > li {
+          float: right;
+        }
+
+        &__drop {
+          line-height: 60px;
+          margin-left: 0;
+          margin-right: -15px;
+          padding: 0 5px 0 @gap;
+        }
+      }
+    }
+  }
+
+  .navbar {
+
+    &-brand {
+      float: right;
+      border-left: 1px solid @border-color;
+      border-right: 0;
+    }
+
+    &-toggle {
+      float: left;
+      margin-left: @gap;
+      margin-right: 0;
+    }
+
+    &-nav__drop {
+      float: left;
+    }
+
+    .dropdown > a {
+      float: right;
     }
   }
 }
