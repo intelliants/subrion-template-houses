@@ -4,227 +4,227 @@
 // --------------------------------------------------
 
 .q-search {
-	margin-top: -66px;
-	margin-bottom: 10px;
+  margin-top: -66px;
+  margin-bottom: 10px;
 
-	+ p {
-		color: fade(@text-color, 80%);
-		padding-left: 30px;
-		padding-right: 30px;
-	}
+  + p {
+    color: fade(@text-color, 80%);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
-	&__addr-eg {
-		.text-fade-50();
-		font-size: @font-size-small;
-		margin-top: 4px;
+  &__addr-eg {
+    .text-fade-50();
+    font-size: @font-size-small;
+    margin-top: 4px;
 
-		a,
-		a:focus {
-			border-bottom: 1px dashed @link-color;
-			text-decoration: none;
+    a,
+    a:focus {
+      border-bottom: 1px dashed @link-color;
+      text-decoration: none;
 
-			&:hover {
-				border-bottom-color: @link-hover-color;
-				text-decoration: none;
-			}
-		}
-	}
+      &:hover {
+        border-bottom-color: @link-hover-color;
+        text-decoration: none;
+      }
+    }
+  }
 
-	&__tabs {
-		.clearfix();
-	}
+  &__tabs {
+    .clearfix();
+  }
 
-	.nav-links {
-		float: right;
-		margin-right: 20px;
+  .nav-links {
+    float: right;
+    margin-right: 20px;
 
-		> li {
-			float: left;
-			margin: 0;
+    > li {
+      float: left;
+      margin: 0;
 
-			> a,
-			> a:focus,
-			> a:active {
-				background: none;
-				color: fade(#fff, 80%);
-				text-decoration: underline;
-				font-size: 18px;
-				line-height: 18px;
-				padding: 24px 10px;
-				display: block;
+      > a,
+      > a:focus,
+      > a:active {
+        background: none;
+        color: fade(#fff, 80%);
+        text-decoration: underline;
+        font-size: 18px;
+        line-height: 18px;
+        padding: 24px 10px;
+        display: block;
 
-				&:hover {
-					color: #fff;
-					text-decoration: none;
-					background: none;
-				}
-			}
+        &:hover {
+          color: #fff;
+          text-decoration: none;
+          background: none;
+        }
+      }
 
-			> span {
-				color: fade(#fff, 80%);
-				font-size: 18px;
-				line-height: 18px;
-				padding: 24px 10px;
-				display: block;
-			}
-		}
+      > span {
+        color: fade(#fff, 80%);
+        font-size: 18px;
+        line-height: 18px;
+        padding: 24px 10px;
+        display: block;
+      }
+    }
 
-		@media (max-width: @screen-md-min) {
-			display: none;
-		}
-	}
+    @media (max-width: @screen-md-min) {
+      display: none;
+    }
+  }
 
-	.nav-tabs {
-		border-bottom: 0 none;
-		float: left;
+  .nav-tabs {
+    border-bottom: 0 none;
+    float: left;
 
-		> li {
-			margin-bottom: 0;
+    > li {
+      margin-bottom: 0;
 
-			> a,
-			> a:focus,
-			> a:active {
-				background: @link-color;
-				color: #fff;
-				border-radius: 0;
-				border: 0 none;
-				padding: 24px 30px;
-				font-size: 18px;
-				line-height: 18px;
-				font-weight: bold;
-				border-radius: @border-radius-base @border-radius-base 0 0;
+      > a,
+      > a:focus,
+      > a:active {
+        background: @link-color;
+        color: #fff;
+        border-radius: 0;
+        border: 0 none;
+        padding: 24px 30px;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: bold;
+        border-radius: @border-radius-base @border-radius-base 0 0;
 
-				&:hover {
-					background: lighten(@link-color, 10%);
-				}
+        &:hover {
+          background: lighten(@link-color, 10%);
+        }
 
-				@media (max-width: @grid-float-breakpoint) {
-					font-size: 16px;
-					line-height: 16px;
-					padding: 20px 24px;
-				}
+        @media (max-width: @grid-float-breakpoint) {
+          font-size: 16px;
+          line-height: 16px;
+          padding: 20px 24px;
+        }
 
-				@media (max-width: 650px) {
-					font-size: 14px;
-					line-height: 14px;
-					padding: 18px 14px;
-				}
-			}
+        @media (max-width: 650px) {
+          font-size: 14px;
+          line-height: 14px;
+          padding: 18px 14px;
+        }
+      }
 
-			&.active > a,
-			&.active > a:focus,
-			&.active > a:active,
-			&.active > a:hover {
-				background: #fff;
-				color: @link-color;
-				border: none;
-			}
-		}
+      &.active > a,
+      &.active > a:focus,
+      &.active > a:active,
+      &.active > a:hover {
+        background: #fff;
+        color: @link-color;
+        border: none;
+      }
+    }
 
 
-	}
+  }
 
-	.tab-content {
-		background: #fff;
-		border-radius: 0 0 @border-radius-base @border-radius-base;
-		padding: 30px;
-		.box-shadow(0 0 15px rgba(0,0,0,.2));
+  .tab-content {
+    background: #fff;
+    border-radius: 0 0 @border-radius-base @border-radius-base;
+    padding: 30px;
+    .box-shadow(0 0 15px rgba(0,0,0,.2));
 
-		.tab-pane {
-			.clearfix();
+    .tab-pane {
+      .clearfix();
 
-			> .alert {
-				margin-bottom: 0;
-			}
-		}
-	}
+      > .alert {
+        margin-bottom: 0;
+      }
+    }
+  }
 
-	&__inputs {
-		margin-bottom: 0;
+  &__inputs {
+    margin-bottom: 0;
 
-		[class^="col-md"] {
-			padding: 0 5px;
+    [class^="col-md"] {
+      padding: 0 5px;
 
-			&:first-child {
-				padding-left: 0;
-			}
+      &:first-child {
+        padding-left: 0;
+      }
 
-			&:last-child {
-				padding-right: 0;
-			}
+      &:last-child {
+        padding-right: 0;
+      }
 
-			@media (max-width: @screen-md-min) {
-				padding: 0;
-				margin-bottom: 10px;
-			}
+      @media (max-width: @screen-md-min) {
+        padding: 0;
+        margin-bottom: 10px;
+      }
 
-			@media (max-width: @grid-float-breakpoint) {
-				margin: 0 0 10px !important;
-			}
-		}
+      @media (max-width: @grid-float-breakpoint) {
+        margin: 0 0 10px !important;
+      }
+    }
 
-		.btn-group {
+    .btn-group {
 
-			.btn-primary {
-				background-color: transparent;
-				color: @btn-primary-bg;
+      .btn-primary {
+        background-color: transparent;
+        color: @btn-primary-bg;
 
-				.fa { display: none; }
+        .fa { display: none; }
 
-				&.active {
-					background-color: @btn-primary-bg;
-					.box-shadow(none);
-					color: #fff;
+        &.active {
+          background-color: @btn-primary-bg;
+          .box-shadow(none);
+          color: #fff;
 
-					.fa { display: inline-block; }
-				}
-			}
-		}
-	}
+          .fa { display: inline-block; }
+        }
+      }
+    }
+  }
 
-	&__more-actions {
-		float: left;
-		color: fade(@text-color, 55%);
+  &__more-actions {
+    float: left;
+    color: fade(@text-color, 55%);
 
-		@media (max-width: @grid-float-breakpoint) {
-			float: none;
-			margin-bottom: 10px;
-		}
+    @media (max-width: @grid-float-breakpoint) {
+      float: none;
+      margin-bottom: 10px;
+    }
 
-		@media (max-width: @screen-xs-max) {
-			.c-checkbox {
-				display: block;
-				margin-left: 0;
-			}
-		}
-	}
+    @media (max-width: @screen-xs-max) {
+      .c-checkbox {
+        display: block;
+        margin-left: 0;
+      }
+    }
+  }
 
-	&__info {
-		float: right;
-		margin: 4px 0 0;
-		color: fade(@text-color, 55%);
+  &__info {
+    float: right;
+    margin: 4px 0 0;
+    color: fade(@text-color, 55%);
 
-		@media (max-width: @grid-float-breakpoint) {
-			float: none;
-		}
-	}
+    @media (max-width: @grid-float-breakpoint) {
+      float: none;
+    }
+  }
 }
 
 // on inner pages
 
 .q-search--inner {
-	margin: 0;
-	padding: 10px 0;
+  margin: 0;
+  padding: 10px 0;
 }
 
 // loader
 
 .q-search__loader {
-	position: absolute;
-	display: none;
-	left: 30px;
-	top: 50%;
-	margin-top: -15px;
+  position: absolute;
+  display: none;
+  left: 30px;
+  top: 50%;
+  margin-top: -15px;
 }
 
 .loader,
@@ -291,71 +291,71 @@
 
 .pr-list {
 
-	[class^="col-md"] {
-		padding: 0 5px;
+  [class^="col-md"] {
+    padding: 0 5px;
 
-		&:first-child {
-			padding-left: 0;
-		}
+    &:first-child {
+      padding-left: 0;
+    }
 
-		&:last-child {
-			padding-right: 0;
-		}
-	}
+    &:last-child {
+      padding-right: 0;
+    }
+  }
 }
 
 .pr-list__item {
-	text-align: center;
-	text-decoration: none;
-	display: block;
-	padding: @vertical-rhythm / 2;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: @vertical-rhythm / 2;
 
-	&__title {
-		text-align: center;
-		font-size: 16px;
-		font-weight: bold;
-		display: block;
-	}
+  &__title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+  }
 
-	&__num {
-		font-size: 14px;
-		color: fade(@text-color, 50%);
-		display: block;
-	}
+  &__num {
+    font-size: 14px;
+    color: fade(@text-color, 50%);
+    display: block;
+  }
 
-	&:hover {
-		text-decoration: none;
-		background: #f2f2f2;
+  &:hover {
+    text-decoration: none;
+    background: #f2f2f2;
 
-		&__title {
+    &__title {
 
-		}
-	}
+    }
+  }
 }
 
 .pr-list-simple {
 
-	&__hidden {
-		display: none;
-	}
+  &__hidden {
+    display: none;
+  }
 
-	&__more {
-		text-align: center;
-		padding: @vertical-rhythm/2 @vertical-rhythm/2 0;
+  &__more {
+    text-align: center;
+    padding: @vertical-rhythm/2 @vertical-rhythm/2 0;
 
-		a,
-		a:focus {
-			font-size: 16px;
-			text-decoration: none;
-			color: fade(@text-color, 50%);
-			border-bottom: 1px dashed fade(@text-color, 50%);
+    a,
+    a:focus {
+      font-size: 16px;
+      text-decoration: none;
+      color: fade(@text-color, 50%);
+      border-bottom: 1px dashed fade(@text-color, 50%);
 
-			&:hover {
-				color: fade(@text-color, 80%);
-				border-bottom-color: fade(@text-color, 80%);
-			}
-		}
-	}
+      &:hover {
+        color: fade(@text-color, 80%);
+        border-bottom-color: fade(@text-color, 80%);
+      }
+    }
+  }
 }
 
 
@@ -365,24 +365,63 @@
 // --------------------------------------------------
 
 .year-list {
-	.list-unstyled();
+  .list-unstyled();
 
-	> li {
-		float: left;
+  > li {
+    float: left;
 
-		> a {
-			.label();
-			display: block;
-			margin: 0 10px 10px 0;
-			font-size: 16px;
-			background-color: #f0f0f0;
-			color: #aaa;
+    > a {
+      .label();
+      display: block;
+      margin: 0 10px 10px 0;
+      font-size: 16px;
+      background-color: #f0f0f0;
+      color: #aaa;
 
-			&:hover {
-				background: #ddd;
-				color: #666;
-				text-decoration: none;
-			}
-		}
-	}
+      &:hover {
+        background: #ddd;
+        color: #666;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+
+//
+// Direction: RTL
+// --------------------------------------------------
+
+html[dir="rtl"] {
+
+  .q-search {
+
+    .nav-tabs {
+      float: right;
+      padding: 0;
+
+      > li > a {
+        margin-left: 2px;
+        margin-right: 0;
+      }
+    }
+
+    .nav-links {
+      float: left;
+      padding: 0;
+      margin-left: 20px;
+      margin-right: 0;
+    }
+
+    @media (min-width: @screen-md) {
+      [class^="col-md"] {
+        float: right;
+      }
+    }
+
+    &__info {
+      float: left;
+    }
+  }
 }
