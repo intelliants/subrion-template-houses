@@ -129,7 +129,7 @@
 
         <block position="verytop" status="active" sticky="1" header="0" classname="">real_estate_quick_search</block>
         <block position="popular_locations" status="active" pages="index" header="0">real_estate_popular_locations</block>
-        <block position="verytop" status="active" pages="index" sticky="0" header="0" classname="">real_estate_sponsored</block>
+        <block position="verytop" status="active" pages="index" sticky="0" header="0" classname="" order="2">real_estate_sponsored</block>
         <block position="left" status="active" classname="" pages="search,search_estates,realestate_index,realestate_search,realestate_add,realestate_view">real_estate_featured</block>
         <block position="verybottom" status="active" pages="index" header="0" classname="">recent_real_estates</block>
         <block position="footer5" status="active" sticky="1" classname="">real_estate_footer_locations</block>

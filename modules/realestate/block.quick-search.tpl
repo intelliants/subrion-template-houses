@@ -19,29 +19,29 @@
                             <div class="container-fluid q-search__inputs">
                                 <div class="row">
                                     <div class="col-md-2">
-                                        <input type="text" name="keyword" autocomplete="off" class="form-control" placeholder="{lang key='field_estate_address'}" id="qs-keyword" value="{$realestate_blocks.search.defaults.keyword}">
+                                        <input type="text" name="keyword" autocomplete="off" class="form-control" placeholder="{lang key='field_estate_address'}" id="qs-keyword" value="{$realestate.search.defaults.keyword}">
                                     </div>
                                     <div class="col-md-2">
                                         <select class="form-control" name="category">
                                             <option value="">{lang key='category'}</option>
-                                            {foreach $realestate_blocks.search.category as $value => $title}
-                                                <option value="{$value}"{if $realestate_blocks.search.defaults.category == $value} selected{/if}>{$title}</option>
+                                            {foreach $realestate.search.category as $value => $title}
+                                                <option value="{$value}"{if $realestate.search.defaults.category == $value} selected{/if}>{$title}</option>
                                             {/foreach}
                                         </select>
                                     </div>
                                     <div class="col-md-2">
                                         <select class="form-control" name="type">
                                             <option value="">{lang key='field_estate_type'}</option>
-                                            {foreach $realestate_blocks.search.type as $value => $title}
-                                                <option value="{$value}"{if $realestate_blocks.search.defaults.type == $value} selected{/if}>{$title}</option>
+                                            {foreach $realestate.search.type as $value => $title}
+                                                <option value="{$value}"{if $realestate.search.defaults.type == $value} selected{/if}>{$title}</option>
                                             {/foreach}
                                         </select>
                                     </div>
                                     <div class="col-md-2">
-                                        <input class="form-control" type="text" name="price[f]" placeholder="Price min" value="{$realestate_blocks.search.defaults.price.min}">
+                                        <input class="form-control" type="text" name="price[f]" placeholder="Price min" value="{$realestate.search.defaults.price.min}">
                                     </div>
                                     <div class="col-md-2">
-                                        <input class="form-control" type="text" name="price[t]" placeholder="Price max" value="{$realestate_blocks.search.defaults.price.max}">
+                                        <input class="form-control" type="text" name="price[t]" placeholder="Price max" value="{$realestate.search.defaults.price.max}">
                                     </div>
                                     <div class="col-md-2">
                                         <button class="btn btn-warning btn-block" type="submit">
@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <p class="q-search__addr-eg">{lang key='for_example'} <a href="#" class="js-location-example">{$realestate_blocks.search.example}</a></p>
+                                        <p class="q-search__addr-eg">{lang key='for_example'} <a href="#" class="js-location-example">{$realestate.search.example}</a></p>
                                     </div>
                                     <div class="col-md-6">
                                         <p class="q-search__info">{lang key='total_houses_listed'}: <b class="text-success">{$num_estates}</b></p>
@@ -75,29 +75,29 @@
                     <div class="container-fluid q-search__inputs">
                         <div class="row">
                             <div class="col-md-2">
-                                <input type="text" name="keyword" autocomplete="off" class="form-control" placeholder="{lang key='field_estate_address'}" id="qs-keyword" value="{$realestate_blocks.search.defaults.keyword}">
+                                <input type="text" name="keyword" autocomplete="off" class="form-control" placeholder="{lang key='field_estate_address'}" id="qs-keyword" value="{$realestate.search.defaults.keyword}">
                             </div>
                             <div class="col-md-2">
                                 <select class="form-control" name="category">
                                     <option value="">{lang key='category'}</option>
-                                    {foreach $realestate_blocks.search.category as $value => $title}
-                                        <option value="{$value}"{if $realestate_blocks.search.defaults.category == $value} selected{/if}>{$title}</option>
+                                    {foreach $realestate.search.category as $value => $title}
+                                        <option value="{$value}"{if $realestate.search.defaults.category == $value} selected{/if}>{$title}</option>
                                     {/foreach}
                                 </select>
                             </div>
                             <div class="col-md-2">
                                 <select class="form-control" name="type">
                                     <option value="">{lang key='field_estate_type'}</option>
-                                    {foreach $realestate_blocks.search.type as $value => $title}
-                                        <option value="{$value}"{if $realestate_blocks.search.defaults.type == $value} selected{/if}>{$title}</option>
+                                    {foreach $realestate.search.type as $value => $title}
+                                        <option value="{$value}"{if $realestate.search.defaults.type == $value} selected{/if}>{$title}</option>
                                     {/foreach}
                                 </select>
                             </div>
                             <div class="col-md-2">
-                                <input class="form-control" type="text" name="price[f]" placeholder="Price min" value="{$realestate_blocks.search.defaults.price.min}">
+                                <input class="form-control" type="text" name="price[f]" placeholder="Price min" value="{$realestate.search.defaults.price.min}">
                             </div>
                             <div class="col-md-2">
-                                <input class="form-control" type="text" name="price[t]" placeholder="Price max" value="{$realestate_blocks.search.defaults.price.max}">
+                                <input class="form-control" type="text" name="price[t]" placeholder="Price max" value="{$realestate.search.defaults.price.max}">
                             </div>
                             <div class="col-md-2">
                                 <button class="btn btn-warning btn-block" type="submit">
@@ -107,7 +107,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <p class="q-search__addr-eg">{lang key='for_example'} <a href="#" class="js-location-example">{$realestate_blocks.search.example}</a></p>
+                                <p class="q-search__addr-eg">{lang key='for_example'} <a href="#" class="js-location-example">{$realestate.search.example}</a></p>
                             </div>
                             <div class="col-md-6">
                                 <p class="q-search__info">{lang key='total_houses_listed'}: <b class="text-success">{$num_estates}</b></p>
