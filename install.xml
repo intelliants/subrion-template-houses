@@ -5,7 +5,7 @@
     <author>Gleb Surinov</author>
     <contributor>Intelliants LLC</contributor>
     <version>2.1.0</version>
-    <date>2018-02-21</date>
+    <date>2018-06-13</date>
     <compatibility>4.2</compatibility>
 
     <dependency type="package" exist="1">realestate</dependency>
